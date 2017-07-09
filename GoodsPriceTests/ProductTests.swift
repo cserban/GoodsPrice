@@ -6,9 +6,9 @@
 //  Copyright © 2017 cserban. All rights reserved.
 //
 
+@testable import GoodsPrice
 import XCTest
 
-@testable import GoodsPrice
 class ProductTests: XCTestCase {
     let validDictionary: [String: Any] = [
         "displayName": "Peas",
@@ -23,7 +23,7 @@ class ProductTests: XCTestCase {
                         "Product init with valid dictionary failed to return a product instance")
 
         XCTAssertTrue(product?.displayName == (validDictionary["displayName"] as? String),
-            "Product init with valid dictionary faild to set displayName")
+                      "Product init with valid dictionary faild to set displayName")
         XCTAssertTrue(product?.priceValue == (validDictionary["priceValue"] as? NSNumber)?.floatValue,
                       "Product init with valid dictionary faild to set priceValue")
         XCTAssertTrue(product?.currencyCode == (validDictionary["currencyCode"] as? String),
@@ -35,8 +35,7 @@ class ProductTests: XCTestCase {
     func testInitProductWithInvalidDictionary() {
         let product = Product(dictionary: ["currencyCode": "USD",
                                            "messureUnit": "bag"])
-        XCTAssertNil(product,
-                        "Product init with invalid dictionary should fail")
+        XCTAssertNil(product, "Product init with invalid dictionary should fail")
     }
 
     func testInitProductWithEmptyDictionary() {

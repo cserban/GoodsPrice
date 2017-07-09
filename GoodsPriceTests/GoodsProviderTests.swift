@@ -6,9 +6,9 @@
 //  Copyright © 2017 cserban. All rights reserved.
 //
 
+@testable import GoodsPrice
 import XCTest
 
-@testable import GoodsPrice
 class GoodsProviderTests: XCTestCase {
 
     var goodsProvider: GoodsProvider?
@@ -26,13 +26,13 @@ class GoodsProviderTests: XCTestCase {
         let goodsProvider = GoodsProvider(mockProducts: mockProducts)
 
         XCTAssertTrue(goodsProvider.products.count == mockProducts.count,
-            "goodsProvider failed to init with correct number of mock data")
+                      "goodsProvider failed to init with correct number of mock data")
     }
 
     func testGoodsProviderWithoutMockData() {
         let goodsProvider = GoodsProvider()
 
-        XCTAssertTrue(goodsProvider.products.count == 0,
+        XCTAssertTrue(goodsProvider.products.isEmpty,
                       "goodsProvider init without mockdata should have an empty product array")
     }
 

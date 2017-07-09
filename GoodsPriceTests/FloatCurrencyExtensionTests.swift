@@ -6,9 +6,9 @@
 //  Copyright © 2017 cserban. All rights reserved.
 //
 
+@testable import GoodsPrice
 import XCTest
 
-@testable import GoodsPrice
 class FloatCurrencyExtensionTests: XCTestCase {
 
     var price: Float = 0.0
@@ -24,7 +24,7 @@ class FloatCurrencyExtensionTests: XCTestCase {
         XCTAssertNotNil(priceStringWithCurrency,
                         "toCurrencyStringWith valid currencyCode failed to return a string")
         XCTAssertTrue(priceStringWithCurrency == "$\(price)",
-            "toCurrencyStringWith valid currencyCode failed to return $\(price)")
+                      "toCurrencyStringWith valid currencyCode failed to return $\(price)")
     }
 
     func testFloatCurrencyExtensionWithUSDValidCurrencyCodeWithSeparator() {
@@ -34,7 +34,7 @@ class FloatCurrencyExtensionTests: XCTestCase {
         XCTAssertNotNil(priceStringWithCurrency,
                         "toCurrencyStringWith valid currencyCode failed to return a string")
         XCTAssertTrue(priceStringWithCurrency == "$1,021.55",
-            "toCurrencyStringWith valid currencyCode failed to return $1,021.55")
+                      "toCurrencyStringWith valid currencyCode failed to return $1,021.55")
     }
 
     func testFloatCurrencyExtensionWithEURValidCurrencyCodeWithoutSeparator() {
@@ -43,14 +43,14 @@ class FloatCurrencyExtensionTests: XCTestCase {
         XCTAssertNotNil(priceStringWithCurrency,
                         "toCurrencyStringWith valid currencyCode failed to return a string")
         XCTAssertTrue(priceStringWithCurrency == "£\(price)",
-            "toCurrencyStringWith valid currencyCode failed to return £\(price)")
+                      "toCurrencyStringWith valid currencyCode failed to return £\(price)")
     }
 
     func testFloatCurrencyExtensionWithInValidCurrencyCode() {
         let currencyCodeUSD = "xxjkhx"
         let priceStringWithCurrency = price.toCurrencyStringWith(currencyCode: currencyCodeUSD)
         XCTAssertNil(priceStringWithCurrency,
-                        "toCurrencyStringWith invalid currencyCode failed to return a null string")
+                     "toCurrencyStringWith invalid currencyCode failed to return a null string")
     }
 
     func testFloatCurrencyExtensionWithEmptyCurrencyCode() {
