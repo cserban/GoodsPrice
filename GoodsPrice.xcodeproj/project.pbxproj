@@ -12,8 +12,14 @@
 		751EA6241F0EA6F100478783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751EA6221F0EA6F100478783 /* Main.storyboard */; };
 		751EA6261F0EA6F100478783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 751EA6251F0EA6F100478783 /* Assets.xcassets */; };
 		751EA6291F0EA6F100478783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751EA6271F0EA6F100478783 /* LaunchScreen.storyboard */; };
-		751EA6341F0EA6F100478783 /* GoodsPriceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751EA6331F0EA6F100478783 /* GoodsPriceTests.swift */; };
 		751EA63F1F0EA6F100478783 /* GoodsPriceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751EA63E1F0EA6F100478783 /* GoodsPriceUITests.swift */; };
+		757185241F11749A00818792 /* GoodsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757185231F11749A00818792 /* GoodsProviderTests.swift */; };
+		757185261F1175A500818792 /* GoodsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757185251F1175A500818792 /* GoodsProvider.swift */; };
+		757185281F12282D00818792 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757185271F12282D00818792 /* Product.swift */; };
+		7571852A1F1229CB00818792 /* MockProducts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757185291F1229CB00818792 /* MockProducts.plist */; };
+		7571852C1F122B0800818792 /* FloatCurrencyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571852B1F122B0800818792 /* FloatCurrencyExtension.swift */; };
+		75E13F8A1F122FAC00723753 /* FloatCurrencyExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E13F891F122FAC00723753 /* FloatCurrencyExtensionTests.swift */; };
+		75E13F8C1F12483E00723753 /* ProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E13F8B1F12483E00723753 /* ProductTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +48,17 @@
 		751EA6281F0EA6F100478783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		751EA62A1F0EA6F100478783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		751EA62F1F0EA6F100478783 /* GoodsPriceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodsPriceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		751EA6331F0EA6F100478783 /* GoodsPriceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsPriceTests.swift; sourceTree = "<group>"; };
 		751EA6351F0EA6F100478783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		751EA63A1F0EA6F100478783 /* GoodsPriceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodsPriceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		751EA63E1F0EA6F100478783 /* GoodsPriceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsPriceUITests.swift; sourceTree = "<group>"; };
 		751EA6401F0EA6F100478783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		757185231F11749A00818792 /* GoodsProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsProviderTests.swift; sourceTree = "<group>"; };
+		757185251F1175A500818792 /* GoodsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsProvider.swift; sourceTree = "<group>"; };
+		757185271F12282D00818792 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		757185291F1229CB00818792 /* MockProducts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MockProducts.plist; sourceTree = "<group>"; };
+		7571852B1F122B0800818792 /* FloatCurrencyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatCurrencyExtension.swift; sourceTree = "<group>"; };
+		75E13F891F122FAC00723753 /* FloatCurrencyExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatCurrencyExtensionTests.swift; sourceTree = "<group>"; };
+		75E13F8B1F12483E00723753 /* ProductTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +111,13 @@
 			children = (
 				751EA61E1F0EA6F100478783 /* AppDelegate.swift */,
 				751EA6201F0EA6F100478783 /* ViewController.swift */,
+				757185251F1175A500818792 /* GoodsProvider.swift */,
+				757185271F12282D00818792 /* Product.swift */,
+				7571852B1F122B0800818792 /* FloatCurrencyExtension.swift */,
 				751EA6221F0EA6F100478783 /* Main.storyboard */,
 				751EA6251F0EA6F100478783 /* Assets.xcassets */,
 				751EA6271F0EA6F100478783 /* LaunchScreen.storyboard */,
+				757185291F1229CB00818792 /* MockProducts.plist */,
 				751EA62A1F0EA6F100478783 /* Info.plist */,
 			);
 			path = GoodsPrice;
@@ -110,7 +126,9 @@
 		751EA6321F0EA6F100478783 /* GoodsPriceTests */ = {
 			isa = PBXGroup;
 			children = (
-				751EA6331F0EA6F100478783 /* GoodsPriceTests.swift */,
+				757185231F11749A00818792 /* GoodsProviderTests.swift */,
+				75E13F8B1F12483E00723753 /* ProductTests.swift */,
+				75E13F891F122FAC00723753 /* FloatCurrencyExtensionTests.swift */,
 				751EA6351F0EA6F100478783 /* Info.plist */,
 			);
 			path = GoodsPriceTests;
@@ -200,6 +218,7 @@
 					751EA62E1F0EA6F100478783 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 3ULF3E829Y;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 751EA61A1F0EA6F100478783;
 					};
@@ -236,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7571852A1F1229CB00818792 /* MockProducts.plist in Resources */,
 				751EA6291F0EA6F100478783 /* LaunchScreen.storyboard in Resources */,
 				751EA6261F0EA6F100478783 /* Assets.xcassets in Resources */,
 				751EA6241F0EA6F100478783 /* Main.storyboard in Resources */,
@@ -280,7 +300,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				751EA6211F0EA6F100478783 /* ViewController.swift in Sources */,
+				757185281F12282D00818792 /* Product.swift in Sources */,
+				7571852C1F122B0800818792 /* FloatCurrencyExtension.swift in Sources */,
 				751EA61F1F0EA6F100478783 /* AppDelegate.swift in Sources */,
+				757185261F1175A500818792 /* GoodsProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +311,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				751EA6341F0EA6F100478783 /* GoodsPriceTests.swift in Sources */,
+				757185241F11749A00818792 /* GoodsProviderTests.swift in Sources */,
+				75E13F8A1F122FAC00723753 /* FloatCurrencyExtensionTests.swift in Sources */,
+				75E13F8C1F12483E00723753 /* ProductTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,11 +486,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3ULF3E829Y;
 				INFOPLIST_FILE = GoodsPriceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cserban.GoodsPriceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoodsPrice.app/GoodsPrice";
 			};
@@ -476,6 +503,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3ULF3E829Y;
 				INFOPLIST_FILE = GoodsPriceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
