@@ -1,11 +1,3 @@
-/* 
-  CurrencyResponseJson.strings
-  GoodsPrice
-
-  Created by Serban Chiricescu on 10/07/2017.
-  Copyright © 2017 cserban. All rights reserved.
-*/
-
 {
     "success": true,
     "terms": "https://currencylayer.com/terms",

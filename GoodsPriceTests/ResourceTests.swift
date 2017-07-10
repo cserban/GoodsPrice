@@ -10,27 +10,18 @@
 import XCTest
 
 class ResourceTests: XCTestCase {
-    let path = Bundle.main.path(forResource: "CurrencyResponse", ofType: "json")
-    var json: Any?
+    var mockCurrencyResponse: MockCurrencyResponse?
 
     override func setUp() {
         super.setUp()
-        guard let path = path else {
-            XCTFail("CurrencyResponse mock json path invaild")
+        guard let mockCurrencyResponse = MockCurrencyResponse() else {
+            XCTFail("CurrencyResponse mock data is invaild")
             return
         }
-        let pathURL = URL(fileURLWithPath: path)
-
-        if let jsonData = try? Data(contentsOf: pathURL, options: .mappedIfSafe),
-             let json = try? JSONSerialization.jsonObject(with: jsonData as Data,
-                                                          options: JSONSerialization.ReadingOptions()) {
-            self.json = json
-        } else {
-            XCTFail("CurrencyResponse mock json is invaild")
-        }
+        self.mockCurrencyResponse = mockCurrencyResponse
     }
 
-    func testResourceInitWithValidCurrencyResponseJson(){
+    func testResourceInitWithValidCurrencyResponseJson() {
         //TO DO
     }
 

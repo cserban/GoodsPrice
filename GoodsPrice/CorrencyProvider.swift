@@ -10,15 +10,15 @@ import Foundation
 
 class CorrencyProvider {
     var quotes: [String: Double] = [:]
-    var webService: Webservice
+    var httpClient: HTTPClient
     private var correncyResourceUrl: URL?
-    init(webService: Webservice = Webservice()) {
+    init(httpClient: HTTPClient = HTTPClient()) {
         if let infoDictionary = Bundle.main.infoDictionary,
             let url = infoDictionary["CurrencyURL"] as? String,
             let accessKey = infoDictionary["CurrencyAccessKey"] as? String {
             correncyResourceUrl = URL(string: "\(url)live?access_key=\(accessKey)")
         }
-        self.webService = webService
+        self.httpClient = httpClient
     }
 
     func loadQuates() {
@@ -27,7 +27,7 @@ class CorrencyProvider {
                                                          parseJSON: { anyObject in
             (anyObject as? JSONDictionary).flatMap(CurrencyResponse.init)
         })
-        webService.load(resource: productResource, completion: ({ currencyResponse in
+        httpClient.load(resource: productResource, completion: ({ currencyResponse, _ in
             if let currencyResponse = currencyResponse {
                 self.quotes = currencyResponse.quotes
             }

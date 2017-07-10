@@ -14,3 +14,8 @@ extension URLRequest {
         httpMethod = resource.method.rawValue
     }
 }
+
+func ==<A> (urlRequest: URLRequest, resource: Resource<A>) -> Bool {
+    return urlRequest.url == resource.url &&
+        urlRequest.httpMethod == resource.method.rawValue
+}
