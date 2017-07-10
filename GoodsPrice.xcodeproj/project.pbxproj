@@ -25,11 +25,12 @@
 		75C0D8CE1F140CDB00F159F1 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0D8CD1F140CDB00F159F1 /* MockURLSessionDataTask.swift */; };
 		75C0D8CF1F14107600F159F1 /* CurrencyResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 75D760241F13838700A6C956 /* CurrencyResponse.json */; };
 		75C0D8D21F141EB400F159F1 /* MockCurrencyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0D8D11F141EB400F159F1 /* MockCurrencyResponse.swift */; };
+		75C0D8D41F1426AF00F159F1 /* CorrencyProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C0D8D31F1426AF00F159F1 /* CorrencyProviderTests.swift */; };
 		75D75FFD1F12C35600A6C956 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D75FFC1F12C35600A6C956 /* Resource.swift */; };
 		75D75FFF1F12C63F00A6C956 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D75FFE1F12C63F00A6C956 /* HTTPClient.swift */; };
 		75D760011F12C70C00A6C956 /* URLRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D760001F12C70C00A6C956 /* URLRequestExtension.swift */; };
 		75D760031F12D5E700A6C956 /* CurrencyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D760021F12D5E700A6C956 /* CurrencyResponse.swift */; };
-		75D760051F12DA2900A6C956 /* CorrencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D760041F12DA2900A6C956 /* CorrencyProvider.swift */; };
+		75D760051F12DA2900A6C956 /* CurrencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D760041F12DA2900A6C956 /* CurrencyProvider.swift */; };
 		75D760231F1382F800A6C956 /* ResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D760221F1382F800A6C956 /* ResourceTests.swift */; };
 		75D760271F1388FD00A6C956 /* CurrencyResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D760261F1388FD00A6C956 /* CurrencyResponseTests.swift */; };
 		75E13F8A1F122FAC00723753 /* FloatCurrencyExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E13F891F122FAC00723753 /* FloatCurrencyExtensionTests.swift */; };
@@ -77,11 +78,12 @@
 		75C0D8CB1F140CAA00F159F1 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
 		75C0D8CD1F140CDB00F159F1 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
 		75C0D8D11F141EB400F159F1 /* MockCurrencyResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCurrencyResponse.swift; sourceTree = "<group>"; };
+		75C0D8D31F1426AF00F159F1 /* CorrencyProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorrencyProviderTests.swift; sourceTree = "<group>"; };
 		75D75FFC1F12C35600A6C956 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		75D75FFE1F12C63F00A6C956 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		75D760001F12C70C00A6C956 /* URLRequestExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestExtension.swift; sourceTree = "<group>"; };
 		75D760021F12D5E700A6C956 /* CurrencyResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyResponse.swift; sourceTree = "<group>"; };
-		75D760041F12DA2900A6C956 /* CorrencyProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorrencyProvider.swift; sourceTree = "<group>"; };
+		75D760041F12DA2900A6C956 /* CurrencyProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyProvider.swift; sourceTree = "<group>"; };
 		75D760071F12DAB800A6C956 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = ../Debug.xcconfig; sourceTree = "<group>"; };
 		75D760081F12DAD900A6C956 /* Qa.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Qa.xcconfig; sourceTree = "<group>"; };
 		75D760091F12DAE200A6C956 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				757185231F11749A00818792 /* GoodsProviderTests.swift */,
+				75C0D8D31F1426AF00F159F1 /* CorrencyProviderTests.swift */,
 				75C0D8C71F14038100F159F1 /* MockURLSession.swift */,
 				75C0D8CD1F140CDB00F159F1 /* MockURLSessionDataTask.swift */,
 				75C0D8C91F14047200F159F1 /* HTTPClientTests.swift */,
@@ -242,7 +245,7 @@
 				757185291F1229CB00818792 /* MockProducts.plist */,
 				75D760241F13838700A6C956 /* CurrencyResponse.json */,
 				757185251F1175A500818792 /* GoodsProvider.swift */,
-				75D760041F12DA2900A6C956 /* CorrencyProvider.swift */,
+				75D760041F12DA2900A6C956 /* CurrencyProvider.swift */,
 			);
 			name = Stores;
 			sourceTree = "<group>";
@@ -434,7 +437,7 @@
 				751EA6211F0EA6F100478783 /* ViewController.swift in Sources */,
 				75C0D8CC1F140CAA00F159F1 /* URLSessionDataTaskProtocol.swift in Sources */,
 				75D75FFF1F12C63F00A6C956 /* HTTPClient.swift in Sources */,
-				75D760051F12DA2900A6C956 /* CorrencyProvider.swift in Sources */,
+				75D760051F12DA2900A6C956 /* CurrencyProvider.swift in Sources */,
 				757185281F12282D00818792 /* Product.swift in Sources */,
 				75C0D8C61F1400A000F159F1 /* URLSessionProtocol.swift in Sources */,
 				7571852C1F122B0800818792 /* FloatExtension.swift in Sources */,
@@ -450,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75C0D8C81F14038100F159F1 /* MockURLSession.swift in Sources */,
+				75C0D8D41F1426AF00F159F1 /* CorrencyProviderTests.swift in Sources */,
 				75C0D8D21F141EB400F159F1 /* MockCurrencyResponse.swift in Sources */,
 				757185241F11749A00818792 /* GoodsProviderTests.swift in Sources */,
 				75E13F8A1F122FAC00723753 /* FloatCurrencyExtensionTests.swift in Sources */,

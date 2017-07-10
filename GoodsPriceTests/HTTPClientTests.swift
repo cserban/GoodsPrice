@@ -28,10 +28,10 @@ class HTTPClientTests: XCTestCase {
                                                             (anyObject as? JSONDictionary)
                                                                 .flatMap(CurrencyResponse.init)
         })
+        subject = HTTPClient(session: session)
     }
 
     func testMockSessionHTTPClientRequestsValues() {
-        subject = HTTPClient(session: session)
         guard let productResource = productResource else {
             XCTFail("Resource is invaild")
             return
@@ -46,7 +46,6 @@ class HTTPClientTests: XCTestCase {
     }
 
     func testMockSessionHTTPClientRequestsStarted() {
-        subject = HTTPClient(session: session)
         guard let productResource = productResource else {
             XCTFail("Resource is invaild")
             return
@@ -60,7 +59,6 @@ class HTTPClientTests: XCTestCase {
     }
 
     func testMockSessionHTTPClientRequestsReturnData() {
-        subject = HTTPClient(session: session)
         guard let productResource = productResource else {
             XCTFail("Resource is invaild")
             return
@@ -107,5 +105,4 @@ class HTTPClientTests: XCTestCase {
         }
         XCTAssertNotNil(currencyResponse)
     }
-
 }
