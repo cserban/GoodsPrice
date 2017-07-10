@@ -1,5 +1,5 @@
 //
-//  FloatCurrencyDisplayExtension.swift
+//  FloatExtension.swift
 //  GoodsPrice
 //
 //  Created by Serban Chiricescu on 09/07/2017.

@@ -15,11 +15,11 @@ struct GoodsProvider {
 
     init(mockProducts: MockProducts? = nil) {
         if let mockProducts = mockProducts {
-            self.products = mockProducts.map {
-                Product(dictionary: $0)
-                }.flatMap {
+            self.products = mockProducts.map ({
+                Product(json: $0)
+                }).flatMap ({
                     $0
-            }
+            })
         }
     }
 }

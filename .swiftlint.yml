@@ -1,9 +1,9 @@
 included:
-  - Source
-  - Tests
+  - GoodsPrice
+  - GoodsPriceTests
+  - GoodsPriceUITests
 opt_in_rules:
   - empty_count
-  - file_header
   - explicit_init
   - closure_spacing
   - overridden_super_call
@@ -20,16 +20,6 @@ opt_in_rules:
   - prohibited_super_call
   - fatal_error_message
   - vertical_parameter_alignment_on_call
-
-file_header:
-  required_pattern: |
-                    \/\/
-                    \/\/  .*?\.swift
-                    \/\/  GoodsPrice
-                    \/\/
-                    \/\/  Created by .*? on \d{1,2}\/\d{1,2}\/\d{2}\.
-                    \/\/  Copyright © \d{4} Serban Chiricescu\. All rights reserved\.
-                    \/\/
 line_length: 120
 number_separator:
   minimum_length: 5

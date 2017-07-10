@@ -14,11 +14,11 @@ struct Product {
     let currencyCode: String
     let messureUnit: String
 
-    init?(dictionary: [String: Any]) {
-        guard let displayName = dictionary["displayName"] as? String,
-            let priceValue = (dictionary["priceValue"] as? NSNumber)?.floatValue,
-            let currencyCode = dictionary["currencyCode"] as? String,
-            let messureUnit = dictionary["messureUnit"] as? String else {
+    init?(json: JSONDictionary) {
+        guard let displayName = json["displayName"] as? String,
+            let priceValue = (json["priceValue"] as? NSNumber)?.floatValue,
+            let currencyCode = json["currencyCode"] as? String,
+            let messureUnit = json["messureUnit"] as? String else {
                 return nil
         }
         self.displayName = displayName

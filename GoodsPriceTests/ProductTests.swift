@@ -6,11 +6,11 @@
 //  Copyright © 2017 cserban. All rights reserved.
 //
 
+@testable import GoodsPrice
 import XCTest
 
-@testable import GoodsPrice
 class ProductTests: XCTestCase {
-    let validDictionary: [String: Any] = [
+    let validDictionary: JSONDictionary = [
         "displayName": "Peas",
         "priceValue": NSNumber(value:1.24),
         "currencyCode": "USD",
@@ -18,12 +18,12 @@ class ProductTests: XCTestCase {
     ]
 
     func testInitProductWithValidDictionary() {
-        let product = Product(dictionary: validDictionary)
+        let product = Product(json: validDictionary)
         XCTAssertNotNil(product,
                         "Product init with valid dictionary failed to return a product instance")
 
         XCTAssertTrue(product?.displayName == (validDictionary["displayName"] as? String),
-            "Product init with valid dictionary faild to set displayName")
+                      "Product init with valid dictionary faild to set displayName")
         XCTAssertTrue(product?.priceValue == (validDictionary["priceValue"] as? NSNumber)?.floatValue,
                       "Product init with valid dictionary faild to set priceValue")
         XCTAssertTrue(product?.currencyCode == (validDictionary["currencyCode"] as? String),
@@ -33,14 +33,13 @@ class ProductTests: XCTestCase {
     }
 
     func testInitProductWithInvalidDictionary() {
-        let product = Product(dictionary: ["currencyCode": "USD",
+        let product = Product(json: ["currencyCode": "USD",
                                            "messureUnit": "bag"])
-        XCTAssertNil(product,
-                        "Product init with invalid dictionary should fail")
+        XCTAssertNil(product, "Product init with invalid dictionary should fail")
     }
 
     func testInitProductWithEmptyDictionary() {
-        let product = Product(dictionary: [:])
+        let product = Product(json: [:])
         XCTAssertNil(product,
                      "Product init with empty dictionary should fail")
     }
