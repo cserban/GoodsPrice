@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias JSONDictionary = [String: AnyObject]
+typealias JSONDictionary = [String: Any]
 
 enum HttpMethod: String {
     case get = "GET"

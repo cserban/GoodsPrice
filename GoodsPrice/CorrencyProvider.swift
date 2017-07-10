@@ -9,7 +9,7 @@
 import Foundation
 
 class CorrencyProvider {
-    var quotes: [String: Float] = [:]
+    var quotes: [String: Double] = [:]
     var webService: Webservice
     private var correncyResourceUrl: URL?
     init(webService: Webservice = Webservice()) {

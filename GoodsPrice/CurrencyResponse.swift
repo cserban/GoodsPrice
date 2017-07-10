@@ -9,13 +9,15 @@
 import Foundation
 
 struct CurrencyResponse {
+    var success: Bool
     var terms: String
     var privacy: String
     var timestamp: Int
     var source: String
-    var quotes: [String: Float]
+    var quotes: [String: Double]
 
-    init(terms: String, privacy: String, timestamp: Int, source: String, quotes: [String: Float]) {
+    init(success: Bool, terms: String, privacy: String, timestamp: Int, source: String, quotes: [String: Double]) {
+        self.success = success
         self.terms = terms
         self.privacy = privacy
         self.timestamp = timestamp
@@ -26,12 +28,13 @@ struct CurrencyResponse {
 
 extension CurrencyResponse {
     init?(json: JSONDictionary) {
-        guard let terms = json["terms"] as? String,
+        guard let success = json["success"] as? Bool,
+            let terms = json["terms"] as? String,
             let privacy = json["privacy"] as? String,
             let timestamp = json["timestamp"] as? Int,
             let source = json["source"] as? String,
-            let quotes = json["quotes"] as? [String: Float] else { return nil }
-
+            let quotes = json["quotes"] as? [String: Double] else { return nil }
+        self.success = success
         self.terms = terms
         self.privacy = privacy
         self.timestamp = timestamp

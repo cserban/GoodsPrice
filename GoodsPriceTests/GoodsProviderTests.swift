@@ -13,8 +13,10 @@ class GoodsProviderTests: XCTestCase {
 
     var goodsProvider: GoodsProvider?
     let path = Bundle.main.path(forResource: "MockProducts", ofType: "plist")
+    var mockProducts: MockProducts = []
 
-    func testGoodsProviderWithMockProducts() {
+    override func setUp() {
+        super.setUp()
         guard let path = path else {
             XCTFail("plist path invaild")
             return
@@ -23,6 +25,10 @@ class GoodsProviderTests: XCTestCase {
             XCTFail("plist at path not vaild")
             return
         }
+        self.mockProducts = mockProducts
+    }
+
+    func testGoodsProviderWithMockProducts() {
         let goodsProvider = GoodsProvider(mockProducts: mockProducts)
 
         XCTAssertTrue(goodsProvider.products.count == mockProducts.count,
