@@ -10,28 +10,17 @@
 import XCTest
 
 class GoodsProviderTests: XCTestCase {
-
-    var goodsProvider: GoodsProvider?
-    let path = Bundle.main.path(forResource: "MockProducts", ofType: "plist")
-    var mockProducts: MockProducts = []
+    var mockProducts: MockProducts?
 
     override func setUp() {
         super.setUp()
-        guard let path = path else {
-            XCTFail("plist path invaild")
-            return
-        }
-        guard let mockProducts = NSArray(contentsOfFile: path) as? MockProducts else {
-            XCTFail("plist at path not vaild")
-            return
-        }
-        self.mockProducts = mockProducts
+        mockProducts = MockProducts()
     }
 
     func testGoodsProviderWithMockProducts() {
-        let goodsProvider = GoodsProvider(mockProducts: mockProducts)
+        let goodsProvider = GoodsProvider(mockProducts: mockProducts?.productsArray)
 
-        XCTAssertTrue(goodsProvider.products.count == mockProducts.count,
+        XCTAssertTrue(goodsProvider.products.count == mockProducts?.productsArray.count,
                       "goodsProvider failed to init with correct number of mock data")
     }
 

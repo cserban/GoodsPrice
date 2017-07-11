@@ -8,11 +8,22 @@
 
 import Foundation
 
-struct Product {
+struct Product: Hashable {
     let displayName: String
     let priceValue: Float
     let currencyCode: String
     let messureUnit: String
+
+    var hashValue: Int {
+        return displayName.hashValue
+    }
+
+    init(displayName: String, priceValue: Float, currencyCode: String, messureUnit: String) {
+        self.displayName = displayName
+        self.priceValue = priceValue
+        self.currencyCode = currencyCode
+        self.messureUnit = messureUnit
+    }
 
     init?(json: JSONDictionary) {
         guard let displayName = json["displayName"] as? String,
@@ -26,4 +37,9 @@ struct Product {
         self.currencyCode = currencyCode
         self.messureUnit = messureUnit
     }
+
+}
+
+func == (lhs: Product, rhs: Product) -> Bool {
+    return lhs.displayName == rhs.displayName
 }
