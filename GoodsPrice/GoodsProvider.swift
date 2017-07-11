@@ -8,12 +8,12 @@
 
 import Foundation
 
-typealias MockProducts = [[String: Any]]
+typealias ProductsArray = [[String: Any]]
 
 struct GoodsProvider {
     var products: [Product] = []
 
-    init(mockProducts: MockProducts? = nil) {
+    init(mockProducts: ProductsArray? = nil) {
         if let mockProducts = mockProducts {
             self.products = mockProducts.map ({
                 Product(json: $0)
