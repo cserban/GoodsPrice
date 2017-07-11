@@ -13,9 +13,9 @@ enum ConversionDirection {
     case division
 }
 
-class Cart {
+class Cart: NSObject {
     var elements = [AnyHashable: Int]()
-    var totalPriceUnits: Float = 0.0
+    dynamic var totalPriceUnits: Float = 0.0
     var currencyCode: String?
     let doubleQuateCharactersCount = 6
     var singleQuateCharactersCount: Int {
