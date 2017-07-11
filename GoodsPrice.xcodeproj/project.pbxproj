@@ -13,6 +13,8 @@
 		751EA6261F0EA6F100478783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 751EA6251F0EA6F100478783 /* Assets.xcassets */; };
 		751EA6291F0EA6F100478783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751EA6271F0EA6F100478783 /* LaunchScreen.storyboard */; };
 		751EA63F1F0EA6F100478783 /* GoodsPriceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751EA63E1F0EA6F100478783 /* GoodsPriceUITests.swift */; };
+		753DD27E1F156D620028923E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753DD27D1F156D620028923E /* StringExtension.swift */; };
+		753DD2801F156FDC0028923E /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753DD27F1F156FDC0028923E /* StringExtensionTests.swift */; };
 		757185241F11749A00818792 /* GoodsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757185231F11749A00818792 /* GoodsProviderTests.swift */; };
 		757185261F1175A500818792 /* GoodsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757185251F1175A500818792 /* GoodsProvider.swift */; };
 		757185281F12282D00818792 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757185271F12282D00818792 /* Product.swift */; };
@@ -70,6 +72,8 @@
 		751EA63A1F0EA6F100478783 /* GoodsPriceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodsPriceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		751EA63E1F0EA6F100478783 /* GoodsPriceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsPriceUITests.swift; sourceTree = "<group>"; };
 		751EA6401F0EA6F100478783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		753DD27D1F156D620028923E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		753DD27F1F156FDC0028923E /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		757185231F11749A00818792 /* GoodsProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsProviderTests.swift; sourceTree = "<group>"; };
 		757185251F1175A500818792 /* GoodsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsProvider.swift; sourceTree = "<group>"; };
 		757185271F12282D00818792 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				75E13F891F122FAC00723753 /* FloatCurrencyExtensionTests.swift */,
+				753DD27F1F156FDC0028923E /* StringExtensionTests.swift */,
 				75C0D8D11F141EB400F159F1 /* MockCurrencyResponse.swift */,
 				75C0D8D91F1434B400F159F1 /* MockProducts.swift */,
 			);
@@ -281,6 +286,7 @@
 			children = (
 				7571852B1F122B0800818792 /* FloatExtension.swift */,
 				75D760001F12C70C00A6C956 /* URLRequestExtension.swift */,
+				753DD27D1F156D620028923E /* StringExtension.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -450,6 +456,7 @@
 				75D760051F12DA2900A6C956 /* CurrencyProvider.swift in Sources */,
 				757185281F12282D00818792 /* Product.swift in Sources */,
 				75C0D8C61F1400A000F159F1 /* URLSessionProtocol.swift in Sources */,
+				753DD27E1F156D620028923E /* StringExtension.swift in Sources */,
 				7571852C1F122B0800818792 /* FloatExtension.swift in Sources */,
 				75D75FFD1F12C35600A6C956 /* Resource.swift in Sources */,
 				75D760011F12C70C00A6C956 /* URLRequestExtension.swift in Sources */,
@@ -467,6 +474,7 @@
 				75C0D8D21F141EB400F159F1 /* MockCurrencyResponse.swift in Sources */,
 				757185241F11749A00818792 /* GoodsProviderTests.swift in Sources */,
 				75E13F8A1F122FAC00723753 /* FloatCurrencyExtensionTests.swift in Sources */,
+				753DD2801F156FDC0028923E /* StringExtensionTests.swift in Sources */,
 				75C0D8CA1F14047200F159F1 /* HTTPClientTests.swift in Sources */,
 				75E13F8C1F12483E00723753 /* ProductTests.swift in Sources */,
 				75C0D8CE1F140CDB00F159F1 /* MockURLSessionDataTask.swift in Sources */,
