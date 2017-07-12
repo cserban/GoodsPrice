@@ -2,6 +2,10 @@
 
 Goods Price is an iOS 10 app that helps you compute price of your cart in different currencies
 
+![image](https://www.dropbox.com/s/3oy0xm9vg9ibts9/Simulator%20Screen%20Shot%2012%20Jul%202017%2C%2010.23.31.png?dl=1)
+![image](https://www.dropbox.com/s/ej8cf5dcwgjimhu/Simulator%20Screen%20Shot%2012%20Jul%202017%2C%2010.23.50.png?dl=1)
+
+
 # Requirements
 1. Xcode 8.3.1+
 2. iOS 10.3+
