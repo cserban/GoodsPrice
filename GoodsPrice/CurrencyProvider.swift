@@ -10,6 +10,7 @@ import Foundation
 
 class CurrencyProvider {
     var quotes: [String: Double] = [:]
+    var defaultCurrency: String?
     var httpClient: HTTPClient
     private var currencyResourceUrl: URL
     init?(httpClient: HTTPClient = HTTPClient(), bundle: Bundle = Bundle.main) {
@@ -29,6 +30,7 @@ class CurrencyProvider {
         httpClient.load(resource: productResource, completion: ({ currencyResponse, error in
             if let currencyResponse = currencyResponse {
                 self.quotes = currencyResponse.quotes
+                self.defaultCurrency = currencyResponse.source
                 completion(true)
             } else if error != nil {
                 completion(false)

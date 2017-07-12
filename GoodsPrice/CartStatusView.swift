@@ -14,12 +14,18 @@ class CartStatusView: NibLoadingView {
     @IBOutlet weak private var separatorView: UIView!
     func configureViewWithTheme(theme: ThemeManager) {
         priceLabel.textColor = theme.color8
-        titleLabel.textColor = theme.color5
+        titleLabel.textColor = theme.color7
         setBackground(color: theme.color1)
         separatorView.backgroundColor = theme.color5.withAlphaComponent(0.10)
     }
 
     func priceLabel(price: Float, currencyCode: String) {
-        priceLabel.text = price.toCurrencyStringWith(currencyCode: currencyCode)
+        if currencyCode.characters.count > 3 {
+            let startIndex = currencyCode.index(currencyCode.startIndex, offsetBy: 3)
+            priceLabel.text = price.toCurrencyStringWith(currencyCode: currencyCode.substring(from: startIndex))
+        } else {
+            priceLabel.text = price.toCurrencyStringWith(currencyCode: currencyCode)
+        }
+
     }
 }

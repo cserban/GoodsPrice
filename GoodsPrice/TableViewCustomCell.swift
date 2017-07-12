@@ -17,8 +17,8 @@ class TableViewCustomCell: UITableViewCell {
 
     func configureViewWithTheme(theme: ThemeManager) {
         self.theme = theme
-        productLabel.textColor = theme.color5
-        countLabel.textColor = theme.color1
+        productLabel.textColor = theme.color7
+        countLabel.textColor = theme.color7
         backgroundColor = theme.color1
         separatorView.backgroundColor = theme.color5.withAlphaComponent(0.10)
         refrashAddViewColor()

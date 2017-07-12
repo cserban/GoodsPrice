@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7504415B1F15DA1B00CC4CD5 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7504415A1F15DA1B00CC4CD5 /* CollectionViewDataSource.swift */; };
+		7504415D1F15DC1500CC4CD5 /* QuateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7504415C1F15DC1500CC4CD5 /* QuateCollectionViewCell.swift */; };
 		751EA61F1F0EA6F100478783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751EA61E1F0EA6F100478783 /* AppDelegate.swift */; };
 		751EA6211F0EA6F100478783 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751EA6201F0EA6F100478783 /* ViewController.swift */; };
 		751EA6241F0EA6F100478783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751EA6221F0EA6F100478783 /* Main.storyboard */; };
@@ -68,6 +70,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7504415A1F15DA1B00CC4CD5 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
+		7504415C1F15DC1500CC4CD5 /* QuateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuateCollectionViewCell.swift; sourceTree = "<group>"; };
 		751EA61B1F0EA6F100478783 /* GoodsPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodsPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		751EA61E1F0EA6F100478783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		751EA6201F0EA6F100478783 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -305,6 +309,7 @@
 				751EA6271F0EA6F100478783 /* LaunchScreen.storyboard */,
 				753DD2871F157E1F0028923E /* CartStatusView */,
 				753DD28A1F1582680028923E /* TableViewCell */,
+				7504415C1F15DC1500CC4CD5 /* QuateCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 				751EA6201F0EA6F100478783 /* ViewController.swift */,
 				753DD28F1F1586D60028923E /* TableViewDataSource.swift */,
 				753DD2921F158E070028923E /* TableViewDelegate.swift */,
+				7504415A1F15DA1B00CC4CD5 /* CollectionViewDataSource.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -491,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				753DD28C1F1582850028923E /* TableViewCustomCell.swift in Sources */,
+				7504415B1F15DA1B00CC4CD5 /* CollectionViewDataSource.swift in Sources */,
 				75D760031F12D5E700A6C956 /* CurrencyResponse.swift in Sources */,
 				751EA6211F0EA6F100478783 /* ViewController.swift in Sources */,
 				753DD2821F1579A90028923E /* ThemeManager.swift in Sources */,
@@ -501,6 +508,7 @@
 				75D760051F12DA2900A6C956 /* CurrencyProvider.swift in Sources */,
 				757185281F12282D00818792 /* Product.swift in Sources */,
 				753DD2861F157E1B0028923E /* CartStatusView.swift in Sources */,
+				7504415D1F15DC1500CC4CD5 /* QuateCollectionViewCell.swift in Sources */,
 				753DD2891F157EFE0028923E /* NibLoadingView.swift in Sources */,
 				75C0D8C61F1400A000F159F1 /* URLSessionProtocol.swift in Sources */,
 				753DD27E1F156D620028923E /* StringExtension.swift in Sources */,
