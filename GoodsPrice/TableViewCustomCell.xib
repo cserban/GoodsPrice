@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Ff-iW-sHZ" id="thp-xh-gKW">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXN-Xj-Pw5">
@@ -34,21 +33,22 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UoZ-Zg-L5O">
-                        <rect key="frame" x="308" y="0.0" width="66.5" height="59"/>
+                        <rect key="frame" x="308.5" y="0.0" width="66" height="59"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hQf-uL-71y">
-                                <rect key="frame" x="5" y="19" width="45.5" height="21"/>
+                                <rect key="frame" x="5" y="19" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="hQf-uL-71y" firstAttribute="leading" secondItem="UoZ-Zg-L5O" secondAttribute="leading" constant="5" id="7mH-mv-Uie"/>
                             <constraint firstItem="hQf-uL-71y" firstAttribute="centerY" secondItem="UoZ-Zg-L5O" secondAttribute="centerY" id="Abx-IC-plX"/>
+                            <constraint firstAttribute="width" constant="66" id="Mem-Mi-i4i"/>
                             <constraint firstAttribute="trailing" secondItem="hQf-uL-71y" secondAttribute="trailing" constant="16" id="bbl-ma-G1W"/>
-                            <constraint firstAttribute="width" secondItem="UoZ-Zg-L5O" secondAttribute="height" multiplier="10:9" constant="1" id="mrd-zr-WXJ"/>
                         </constraints>
                     </view>
                 </subviews>

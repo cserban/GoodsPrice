@@ -21,12 +21,15 @@ class ViewController: UIViewController {
             cartStatusView.configureViewWithTheme(theme: themeManager)
         }
     }
+    @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak private var tableView: UITableView!
+
     var tableViewDataSource: TableViewDataSource?
     var tableViewDelegate: TableViewDelegate?
     var goodsProvider: GoodsProvider?
     private var observerContext = 0
     @objc var cart: Cart?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = themeManager.color1
@@ -34,6 +37,7 @@ class ViewController: UIViewController {
         initGoodsProvider()
         initCart()
         tableView.reloadData()
+        clearButton.setTitleColor(themeManager.color6, for: .normal)
     }
 
     deinit {
@@ -67,6 +71,13 @@ class ViewController: UIViewController {
         tableViewDelegate?.cart = cart
     }
 
+    @IBAction func clearCartAction(_ sender: Any) {
+        removeObserver(self, forKeyPath: #keyPath(cart.totalPriceUnits))
+        cart = nil
+        initCart()
+        tableView.reloadData()
+        cartStatusView.priceLabel(price: cart?.totalPriceUnits ?? 0.0, currencyCode: cart?.currencyCode ?? "")
+    }
     override func observeValue(forKeyPath keyPath: String?, of object: Any?,
                                change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == #keyPath(cart.totalPriceUnits) {
