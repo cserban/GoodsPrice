@@ -1,11 +1,3 @@
-local - price
-cart default currency
-better memory management at quate split
-
-move logic from cart to quateProvider
-goods provider rename 
-goods provider data source
-
 # GoodsPrice
 
 Goods Price is an iOS 10 app that helps you compute price of your cart in different currencies
